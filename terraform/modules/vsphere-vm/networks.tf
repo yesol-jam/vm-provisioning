@@ -40,7 +40,7 @@ resource "null_resource" "network_stabilization" {
 # 네트워크 폴더 관리 (클러스터 환경 전용)
 # =============================================================================
 
-# 네트워크 폴더 생성 (iTraining-Net)
+# 네트워크 폴더 생성 (VM-Networks)
 # 클러스터 환경에서 분산 포트그룹을 정리하기 위한 폴더
 resource "vsphere_folder" "network_folder" {
   count         = var.compute_cluster != null && var.network_folder != null && length(local.create_networks) > 0 ? 1 : 0
@@ -50,13 +50,13 @@ resource "vsphere_folder" "network_folder" {
 
   lifecycle {
     # 폴더가 이미 존재하면 import 필요
-    # terraform import vsphere_folder.network_folder /Datacenter/network/iTraining-Net
+    # terraform import vsphere_folder.network_folder /Datacenter/network/VM-Networks
     ignore_changes = [path]
   }
 }
 
 # 클러스터용 분산 포트그룹 생성 (클러스터 환경)
-# iTraining-Net 폴더 아래에 포트그룹 생성
+# VM-Networks 폴더 아래에 포트그룹 생성
 resource "vsphere_distributed_port_group" "cluster_networks" {
   for_each = var.compute_cluster != null ? local.create_networks : {}
 

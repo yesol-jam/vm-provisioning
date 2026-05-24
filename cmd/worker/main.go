@@ -5,8 +5,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/itraining/provisioning-worker/internal/config"
-	"github.com/itraining/provisioning-worker/internal/worker"
+	"github.com/yesol-jam/vm-provisioning/internal/config"
+	"github.com/yesol-jam/vm-provisioning/internal/worker"
 	"github.com/sirupsen/logrus"
 )
 
@@ -22,7 +22,7 @@ func main() {
 		logger.SetLevel(logrus.DebugLevel)
 	}
 
-	logger.Info("===== itraining provisioning-worker 시작 =====")
+	logger.Info("===== vm-provisioning-worker 시작 =====")
 
 	// 설정 로드
 	cfg := config.Load()
@@ -48,5 +48,5 @@ func main() {
 	// 워커 종료
 	w.Stop()
 
-	logger.Info("===== itraining provisioning-worker 종료 =====")
+	logger.Info("===== vm-provisioning-worker 종료 =====")
 }

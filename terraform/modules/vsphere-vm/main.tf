@@ -95,7 +95,7 @@ data "vsphere_content_library_item" "template" {
 # VM 폴더 생성 (깊이별 순차 생성)
 # =============================================================================
 
-# 레벨 2 폴더 (예: iTraining/project-1)
+# 레벨 2 폴더 (예: VMs/project-1)
 resource "vsphere_folder" "vm_folders_level2" {
   for_each = var.create_folders ? toset([
     for path in local.all_folder_paths : path
@@ -111,7 +111,7 @@ resource "vsphere_folder" "vm_folders_level2" {
   }
 }
 
-# 레벨 3 폴더 (예: iTraining/project-1/vmName) - 레벨 2 완료 후 생성
+# 레벨 3 폴더 (예: VMs/project-1/vmName) - 레벨 2 완료 후 생성
 resource "vsphere_folder" "vm_folders_level3" {
   for_each = var.create_folders ? toset([
     for path in local.all_folder_paths : path

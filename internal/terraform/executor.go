@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/itraining/provisioning-worker/internal/api"
-	"github.com/itraining/provisioning-worker/internal/config"
-	"github.com/itraining/provisioning-worker/pkg/models"
+	"github.com/yesol-jam/vm-provisioning/internal/api"
+	"github.com/yesol-jam/vm-provisioning/internal/config"
+	"github.com/yesol-jam/vm-provisioning/pkg/models"
 	"github.com/sirupsen/logrus"
 )
 
@@ -330,7 +330,7 @@ func (e *Executor) generateTfvars(workDir string, project *models.TerraformProje
 	}
 
 	// 기존 폴더 목록 (기본 폴더만 - 테넌트/테스트 폴더는 Terraform에서 생성)
-	existingFolders := []string{"iTraining", "iTraining/test", "iTraining/B2B"}
+	existingFolders := []string{"VMs", "VMs/test", "VMs/b2b"}
 
 	// tfvars Map 생성 (구조체 대신 Map 사용하여 vsphere_password 키 자체를 제거)
 	// 보안: VspherePassword는 파일에 저장하지 않고 환경변수로 전달
@@ -354,8 +354,8 @@ func (e *Executor) generateTfvars(workDir string, project *models.TerraformProje
 		if project.DistributedSwitch != "" {
 			vars["distributed_switch_name"] = project.DistributedSwitch
 		}
-		// 클러스터 환경에서는 네트워크 폴더 사용 (기본값: iTraining-Net)
-		vars["network_folder"] = "iTraining-Net"
+		// 클러스터 환경에서는 네트워크 폴더 사용 (기본값: VM-Networks)
+		vars["network_folder"] = "VM-Networks"
 	} else if project.EsxiHost != "" {
 		vars["esxi_host"] = project.EsxiHost
 		if project.DefaultVswitch != "" {

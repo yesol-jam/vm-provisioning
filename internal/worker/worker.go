@@ -5,10 +5,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/itraining/provisioning-worker/internal/api"
-	"github.com/itraining/provisioning-worker/internal/config"
-	"github.com/itraining/provisioning-worker/internal/queue"
-	"github.com/itraining/provisioning-worker/internal/terraform"
+	"github.com/yesol-jam/vm-provisioning/internal/api"
+	"github.com/yesol-jam/vm-provisioning/internal/config"
+	"github.com/yesol-jam/vm-provisioning/internal/queue"
+	"github.com/yesol-jam/vm-provisioning/internal/terraform"
 	"github.com/sirupsen/logrus"
 )
 

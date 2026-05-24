@@ -68,9 +68,9 @@ variable "distributed_switch_name" {
 }
 
 variable "network_folder" {
-  description = "네트워크 포트그룹을 생성할 폴더 경로 (클러스터 환경 전용, 예: iTraining-Net)"
+  description = "네트워크 포트그룹을 생성할 폴더 경로 (클러스터 환경 전용, 예: VM-Networks)"
   type        = string
-  default     = "iTraining-Net"
+  default     = "VM-Networks"
 }
 
 variable "default_vswitch" {
@@ -112,7 +112,7 @@ variable "create_folders" {
 variable "existing_folders" {
   description = "이미 존재하는 폴더 목록 (자동 생성에서 제외)"
   type        = list(string)
-  default     = ["iTraining", "iTraining/test", "iTraining/B2B"]
+  default     = ["VMs", "VMs/test", "VMs/b2b"]
 }
 
 # =============================================================================

@@ -136,7 +136,7 @@ type TerraformVars struct {
 	ContentLibraryName    string `json:"content_library_name"`
 	DistributedSwitchName string `json:"distributed_switch_name,omitempty"`
 	DefaultVswitch        string `json:"default_vswitch,omitempty"`
-	NetworkFolder         string `json:"network_folder,omitempty"` // 네트워크 폴더 (클러스터 환경 전용, 예: iTraining-Net)
+	NetworkFolder         string `json:"network_folder,omitempty"` // 네트워크 폴더 (클러스터 환경 전용, 예: VM-Networks)
 
 	ExistingNetworks []string `json:"existing_networks"`
 	CreateFolders    bool     `json:"create_folders"`

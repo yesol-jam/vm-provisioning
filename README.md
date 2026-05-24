@@ -141,7 +141,7 @@ vSphere 환경에서 VM 배포에 필요한 모든 리소스를 자동으로 생
    └─ 데이터센터, 클러스터, 데이터스토어, Content Library 조회
 
 2. VM 폴더 생성 (Level별 순차)
-   └─ iTraining → iTraining/project-1 → iTraining/project-1/vm-name
+   └─ VMs → VMs/project-1 → VMs/project-1/vm-name
 
 3. 네트워크 포트그룹 생성 (병렬 후 15초 안정화 대기)
    └─ DVS(클러스터) 또는 vSwitch(단일 호스트) 분기 처리

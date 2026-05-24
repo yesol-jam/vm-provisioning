@@ -37,7 +37,7 @@ type Config struct {
 }
 
 // Load 환경변수에서 설정을 로드합니다
-// 사용법: source .env.{환경} && ./provisioning-worker
+// 사용법: source .env.{환경} && ./vm-provisioning-worker
 func Load() *Config {
 
 	return &Config{
@@ -49,7 +49,7 @@ func Load() *Config {
 
 		// Backend API
 		BackendAPIURL: getEnv("BACKEND_API_URL", "http://localhost:8080"),
-		BackendAPIKey: getEnv("BACKEND_API_KEY", "infra-worker-secret-key-change-in-production"),
+		BackendAPIKey: getEnv("BACKEND_API_KEY", "your-api-key-here"),
 
 		// Terraform
 		TerraformBinary:     getEnv("TERRAFORM_BINARY", "terraform"),

@@ -1,4 +1,4 @@
-module github.com/itraining/provisioning-worker
+module github.com/yesol-jam/vm-provisioning
 
 go 1.21
 

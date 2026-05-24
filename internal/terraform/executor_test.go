@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/itraining/provisioning-worker/internal/api"
-	"github.com/itraining/provisioning-worker/internal/config"
+	"github.com/yesol-jam/vm-provisioning/internal/api"
+	"github.com/yesol-jam/vm-provisioning/internal/config"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

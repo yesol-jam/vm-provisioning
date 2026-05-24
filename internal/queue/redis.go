@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/go-redis/redis/v8"
-	"github.com/itraining/provisioning-worker/internal/config"
-	"github.com/itraining/provisioning-worker/pkg/models"
+	"github.com/yesol-jam/vm-provisioning/internal/config"
+	"github.com/yesol-jam/vm-provisioning/pkg/models"
 	"github.com/sirupsen/logrus"
 )
 

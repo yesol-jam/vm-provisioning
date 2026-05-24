@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/itraining/provisioning-worker/pkg/models"
+	"github.com/yesol-jam/vm-provisioning/pkg/models"
 	"github.com/sirupsen/logrus"
 )
 
